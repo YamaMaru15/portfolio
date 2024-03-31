@@ -23,11 +23,29 @@
     $('.header').fadeOut();
   });
 
+  $('.portfolio__col--prefectures-img').click(function() {
+    $('.portfolio__popup--overlay, .portfolio__popup--prefectures-content').fadeIn();
+    $('.header').fadeOut();
+  });
+
   $('.portfolio__pop--close-btn, .portfolio__popup--overlay').click(function() {
     $('.portfolio__popup--overlay, .portfolio__popup--content').fadeOut();
     $('.header').fadeIn();
   });
 
+  // slide
+  $('.portfolio__popup--button').click(function() {
+    $('.portfolio__slide--overlay, .portfolio__slide--prefectures-content').fadeIn();
+  });
+
+  $('.portfolio__slide--overlay').click(function() {
+    $('.portfolio__slide--overlay, .portfolio__slide--prefectures-content').fadeOut();
+  });
+
+  $('.slide-items__wrap').slick({
+    dots: true,
+  });
+  
   // fadeUp Animation
   function fadeUpAnime(){
     $('.fadeUp').each(function() {
